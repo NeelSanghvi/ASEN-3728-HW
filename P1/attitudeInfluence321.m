@@ -5,6 +5,10 @@ function T = attitudeInfluence321(phiThetaPsi)
 % Outputs:
 %   T - 3x3 attitude influence matrix
 
-T = eye(3); % Replace with your code
+phi = phiThetaPsi(1);
+theta = phiThetaPsi(2);
+psi = phiThetaPsi(3);
+
+T = [1, sin(phi)*tan(theta), cos(phi)*tan(theta); 0, cos(phi), -sin(phi); 0, sin(phi)/cos(theta), cos(phi)/cos(theta)]; % Replace with your code
 
 end
